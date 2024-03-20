@@ -13,8 +13,7 @@ read -p "Enter Number Two :- " num2
 echo
 
 # Validate if input is numeric
-re='^[0-9]+$'
-if ! [[ $num1 =~ $re ]] || ! [[ $num2 =~ $re ]]; then
+if ! [[ "$num1" =~ ^[0-9]+$ ]] || ! [[ "$num2" =~ ^[0-9]+$ ]]; then
 	    echo "Please enter valid integer numbers."
 	        exit 1
 fi
